@@ -4,13 +4,13 @@ import { X } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { products } from "@/data/products";
+import { galleryImages } from "@/data/galleryImages";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
-  // Use product images for the gallery
-  const galleryImages = products.map((p) => ({ src: p.image, alt: p.name }));
+  // Gallery images from data
+  const images = galleryImages;
 
   return (
     <div className="min-h-screen">
@@ -43,7 +43,7 @@ const Gallery = () => {
         <section className="py-16 md:py-20 bg-background">
           <div className="container">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-              {galleryImages.map((img, i) => (
+              {images.map((img, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, scale: 0.95 }}
