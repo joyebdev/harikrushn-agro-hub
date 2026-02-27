@@ -8,6 +8,7 @@ import gi7 from "@/assets/gallery/gi7.jpeg";
 import gi8 from "@/assets/gallery/gi8.jpeg";
 import gi9 from "@/assets/gallery/gi9.jpeg";
 import gi10 from "@/assets/gallery/gi10.jpeg";
+import gi11 from "@/assets/gallery/gi11.jpeg";
 
 export interface GalleryImage {
   src: string;
@@ -25,4 +26,5 @@ export const galleryImages: GalleryImage[] = [
   { src: gi8, alt: "Simodis by Syngenta" },
   { src: gi9, alt: "LaNevo Insecticide by Dhanuka" },
   { src: gi10, alt: "Simodis 360 Innovation" },
+  { src: gi11, alt: "Indo Swiss Pitbull & Titlis Products" },
 ];
