@@ -50,10 +50,10 @@ const Contact = () => {
                     <div className="w-10 h-10 rounded-lg gradient-primary text-primary-foreground flex items-center justify-center shrink-0">
                       <MapPin className="w-5 h-5" />
                     </div>
-                    <div>
+                     <a href="https://maps.app.goo.gl/XbH35A4xo6icQutaA?g_st=aw" target="_blank" rel="noopener noreferrer">
                       <h3 className="font-semibold text-foreground text-sm mb-1">Address</h3>
-                      <p className="text-sm text-muted-foreground">Paresh Auto Garage Ne Baju, Lathidad – 364710</p>
-                    </div>
+                      <p className="text-sm text-muted-foreground hover:text-primary transition-colors">Paresh Auto Garage Ne Baju, Lathidad – 364710</p>
+                    </a>
                   </div>
 
                   <div className="flex items-start gap-4 p-4 bg-card rounded-xl border border-border shadow-card">
