@@ -1,24 +1,12 @@
-# Welcome to your Lovable project
+# Harikrushn Agro Chemicals
 
-## Project info
+Website for Harikrushn Agro Chemicals - Trusted agro chemical solutions for better farming. Serving farmers and dealers across Gujarat with quality seeds and agricultural products.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## How to edit this code?
 
-## How can I edit this code?
+**Local Development with your IDE**
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+The requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
 Follow these steps:
 
@@ -27,7 +15,7 @@ Follow these steps:
 git clone <YOUR_GIT_URL>
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd harikrushn-agro-hub
 
 # Step 3: Install the necessary dependencies.
 npm i
@@ -36,7 +24,7 @@ npm i
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+**Edit files directly in GitHub**
 
 - Navigate to the desired file(s).
 - Click the "Edit" button (pencil icon) at the top right of the file view.
@@ -60,14 +48,14 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+For deployment instructions, refer to your hosting provider's documentation. This is a static React application that can be deployed to services like Vercel, Netlify, GitHub Pages, or any static hosting solution.
 
-## Can I connect a custom domain to my Lovable project?
+To build for production:
 
-Yes, you can!
+```sh
+npm run build
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The build output will be in the `dist` directory.
