@@ -7,6 +7,9 @@ import s6 from "@/assets/seeds/s6.jpeg";
 import s7 from "@/assets/seeds/s7.jpeg";
 import s8 from "@/assets/seeds/s8.jpeg";
 import s9 from "@/assets/seeds/s9.jpeg";
+import s10 from "@/assets/seeds/s10.jpeg";
+import s11 from "@/assets/seeds/s11.jpeg";
+import s12 from "@/assets/seeds/s12.jpeg";
 
 export interface Product {
   id: string;
@@ -69,5 +72,23 @@ export const products: Product[] = [
     name: "Reno-4 Cumin Seeds",
     description: "Premium Reno cumin seeds suited for Gujarat's climate and optimal spice production.",
     image: s9,
+  },
+  {
+    id: "gram-gg3",
+    name: "GG-3 Gram Seeds",
+    description: "Reno premium gram seeds (chana) for healthy and high-yield pulse crop production.",
+    image: s10,
+  },
+  {
+    id: "fenugreek-reno111",
+    name: "Reno-111 Fenugreek Seeds",
+    description: "Double Super fenugreek (methi) seeds for aromatic and quality spice cultivation.",
+    image: s11,
+  },
+  {
+    id: "gram-gjg5",
+    name: "GJG-5 Gram Seeds",
+    description: "Reno premium gram seeds for robust chana production and excellent harvest quality.",
+    image: s12,
   },
 ];
