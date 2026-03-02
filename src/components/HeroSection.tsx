@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sprout } from "lucide-react";
 import heroBanner from "@/assets/hero-banner.jpg";
 
 const HeroSection = () => {
@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img src={heroBanner} alt="Lush farmland" className="w-full h-full object-cover" />
+        <img src={heroBanner} alt="Lush farmland" className="w-full h-full object-cover" fetchPriority="high" />
         <div className="absolute inset-0 gradient-hero" />
       </div>
 
@@ -25,7 +25,7 @@ const HeroSection = () => {
             transition={{ delay: 0.3 }}
             className="inline-block px-4 py-1.5 rounded-full bg-primary-foreground/15 backdrop-blur-sm text-primary-foreground text-sm font-medium mb-6 border border-primary-foreground/20"
           >
-            🌿 Trusted by Farmers Across Gujarat
+            <Sprout className="w-4 h-4 inline-block mr-1" /> Trusted by Farmers Across Gujarat
           </motion.span>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground leading-tight mb-6">
