@@ -29,13 +29,13 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || mobileOpen
           ? "bg-card/95 backdrop-blur-md shadow-premium"
           : "bg-transparent"
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3" onClick={() => setMobileOpen(false)}>
           <img src={logo} alt="Harikrushn Agro Chemicals" className="h-12 md:h-14 w-auto rounded-full" />
           <div className="hidden sm:block">
             <h1 className="text-sm md:text-base font-display font-bold text-foreground leading-tight">
@@ -93,6 +93,7 @@ const Header = () => {
                 <Link
                   key={link.path}
                   to={link.path}
+                  onClick={() => setMobileOpen(false)}
                   className={`text-base font-body py-2 transition-colors ${
                     location.pathname === link.path
                       ? "text-primary font-semibold"

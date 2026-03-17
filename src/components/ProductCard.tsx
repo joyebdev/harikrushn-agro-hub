@@ -10,22 +10,29 @@ interface ProductCardProps {
 
 const ProductCard = ({ product, index }: ProductCardProps) => {
   const [enquiryOpen, setEnquiryOpen] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
+        viewport={{ once: true, margin: "-20px" }}
+        transition={{ duration: 0.4, delay: index * 0.03 }}
         className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-premium transition-all duration-300 border border-border"
       >
-        <div className="aspect-square overflow-hidden bg-muted">
+        <div className="relative aspect-square overflow-hidden bg-muted">
+          {!imageLoaded && (
+            <div className="absolute inset-0 animate-shimmer" />
+          )}
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className={`w-full h-full object-cover group-hover:scale-105 transition-all duration-500 ${
+              imageLoaded ? "opacity-100" : "opacity-0"
+            }`}
             loading="eager"
+            onLoad={() => setImageLoaded(true)}
           />
         </div>
         <div className="p-5">

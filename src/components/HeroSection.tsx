@@ -6,9 +6,8 @@ import heroBanner from "@/assets/hero-banner.jpg";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
       <div className="absolute inset-0">
-        <img src={heroBanner} alt="Lush farmland" className="w-full h-full object-cover" fetchPriority="high" />
+        <img src={heroBanner} alt="Lush farmland" className="w-full h-full object-cover" fetchPriority="high" loading="eager" />
         <div className="absolute inset-0 gradient-hero" />
       </div>
 

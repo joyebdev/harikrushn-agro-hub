@@ -8,6 +8,11 @@ import { galleryImages } from "@/data/galleryImages";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+  const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
+
+  const handleImageLoad = (index: number) => {
+    setLoadedImages((prev) => ({ ...prev, [index]: true }));
+  };
 
   // Gallery images from data
   const images = galleryImages;
@@ -46,18 +51,24 @@ const Gallery = () => {
               {images.map((img, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, scale: 0.95 }}
+                  initial={{ opacity: 0, scale: 0.98 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.08 }}
-                  className="group cursor-pointer aspect-square rounded-xl overflow-hidden shadow-card border border-border"
+                  transition={{ delay: i * 0.03 }}
+                  className="group cursor-pointer relative aspect-square rounded-xl overflow-hidden shadow-card border border-border bg-muted"
                   onClick={() => setSelectedImage(img)}
                 >
+                  {!loadedImages[i] && (
+                    <div className="absolute inset-0 animate-shimmer" />
+                  )}
                   <img
                     src={img.src}
                     alt={img.alt}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className={`w-full h-full object-cover group-hover:scale-110 transition-all duration-500 ${
+                      loadedImages[i] ? "opacity-100" : "opacity-0"
+                    }`}
                     loading="eager"
+                    onLoad={() => handleImageLoad(i)}
                   />
                 </motion.div>
               ))}
